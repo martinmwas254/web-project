@@ -7,7 +7,7 @@ To run the application, you'll need to have Node.js and npm installed on your ma
 Clone the repository to your local machine.
 Open a terminal window and navigate to the project directory.
 Run the command npm install to install the necessary dependencies.
-Run the command npm start to start the application.
+Run the command npm start to start the application.https://github.com/martinmwas254/web-project.git
 Open a web browser and go to https://jazzy-youtiao-80be81.netlify.app to view the application.
 Pages
 The Gym React Application consists of the following pages:
