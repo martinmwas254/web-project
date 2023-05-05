@@ -1,4 +1,67 @@
 {
+  "members": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "phone": "(123) 456-7890",
+      "membership": "Premium",
+      "joinDate": "2022-01-01",
+      "activity": [
+        {
+          "date": "2022-02-01",
+          "type": "Cardio",
+          "duration": 30,
+          "caloriesBurned": 300
+        },
+        {
+          "date": "2022-02-03",
+          "type": "Strength",
+          "duration": 60,
+          "caloriesBurned": 500
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "phone": "(987) 654-3210",
+      "membership": "Basic",
+      "joinDate": "2022-03-01",
+      "activity": [
+        {
+          "date": "2022-03-02",
+          "type": "Cardio",
+          "duration": 45,
+          "caloriesBurned": 400
+        }
+      ]
+    },
+    {
+      "name": "joshua mwangi ",
+      "email": "joshua254@gmail.com",
+      "phone": "0759769477",
+      "membership": "premium",
+      "id": 12
+    },
+    {
+      "name": "joshua mwangi ",
+      "email": "majorhart4@gmail.com",
+      "phone": "0759769477",
+      "membership": "premium",
+      "joinDate": "4-5-2023",
+      "id": 15
+    },
+    {
+      "name": "joshua mwangi ",
+      "email": "majorhart4@gmail.com",
+      "phone": "999000999",
+      "membership": "premium",
+      "joinDate": "4-5-2023",
+      "id": 16
+    }
+  ],
   "trainers": [
     {
       "id": 1,
@@ -82,15 +145,6 @@
         "Tai chi"
       ],
       "photo": "https://i.pinimg.com/originals/7a/df/b0/7adfb0b1933d70e5a137d6b90037459f.jpg"
-    },
-    {
-      "name": "max",
-      "email": "max@gmail.com",
-      "specialties": [
-        "running"
-      ],
-      "photo": "https://static01.nyt.com/images/2012/06/24/sports/GENDER/GENDER-superJumbo.jpg",
-      "id": 9
     }
   ]
 }

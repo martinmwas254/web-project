@@ -11,7 +11,7 @@
     list-style: none;
     display: flex ;
     gap: 2rem;
-    color: rgb(45, 26, 26);
+    color: rgb(30, 221, 144);
 }
 .headermenu>li{
     cursor: pointer;
@@ -19,6 +19,6 @@
     font-weight: bolder;
 }
 .headermenu>li:hover{
-    color: aqua;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }

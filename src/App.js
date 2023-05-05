@@ -1,28 +1,24 @@
-import "./App.css";
+import React from "react";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import Hero from "./components/Hero/Hero";
 import Plans from "./components/Plans/Plans";
 import Programs from "./components/Hero/Programs/Programs";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Members from './components/Members/Members';
 import Join from "./components/Join/Join";
-// import Footer from './components/Footer/Footer';
-import { NavLink, Routes, Route, BrowserRouter } from "react-router-dom";
 import Trainer from "./components/Trainer/Trainer";
+import "./App.css";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <nav className="navba">
-          <ul
-            style={{
-              display: "flex",
-              gap: "5%",
-              listStyle: "none",
-              marginTop: "10 px",
-            }}
-          >
+          <ul className="nav-links">
             <li>
               <NavLink
-                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                activeClassName="active"
+                className="nav-link"
                 to="/"
               >
                 Home
@@ -30,7 +26,8 @@ function App() {
             </li>
             <li>
               <NavLink
-                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                activeClassName="active"
+                className="nav-link"
                 to="/programs"
               >
                 Programs
@@ -38,7 +35,8 @@ function App() {
             </li>
             <li>
               <NavLink
-                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                activeClassName="active"
+                className="nav-link"
                 to="/plans"
               >
                 Plans
@@ -46,15 +44,17 @@ function App() {
             </li>
             <li>
               <NavLink
-                style={({ isActive }) => (isActive ? { color: "red" } : {})}
-                to="/testimonial"
+                activeClassName="active"
+                className="nav-link"
+                to="/testimonials"
               >
                 Testimonials
               </NavLink>
             </li>
             <li>
               <NavLink
-                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                activeClassName="active"
+                className="nav-link"
                 to="/join"
               >
                 Join
@@ -62,7 +62,17 @@ function App() {
             </li>
             <li>
               <NavLink
-                style={({ isActive }) => (isActive ? { color: "red" } : {})}
+                activeClassName="active"
+                className="nav-link"
+                to="/members"
+              >
+                Members
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
                 to="/trainer"
               >
                 Trainer
@@ -78,6 +88,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/join" element={<Join />} />
           <Route path="/trainer" element={<Trainer />} />
+          <Route path="/members" element={<Members />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,10 +1,10 @@
+
 import React, { useState, useEffect } from "react";
 import "./Trainer.css";
 
 function TrainerCard({ trainer, onDelete }) {
   return (
-    <>
-    <div className="bot-grid"> 
+    <div className="bot-grid">
       <div className="card-container">
         <div className="card">
           <img src={trainer.photo} alt={trainer.name} width="200 px"/>
@@ -18,8 +18,7 @@ function TrainerCard({ trainer, onDelete }) {
           <button onClick={() => onDelete(trainer.id)}>Delete</button>
         </div>
       </div>
-      </div>
-    </>
+    </div>
   );
 }
 
@@ -31,7 +30,7 @@ function Trainer() {
   const [photo, setPhoto] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/trainers")
+    fetch("http://localhost:8001/trainers")
       .then((response) => response.json())
       .then((data) => setTrainers(data));
   }, []);
@@ -39,7 +38,7 @@ function Trainer() {
   function handleSubmit(event) {
     event.preventDefault();
     const data = { name, email, specialties: specialties.split(","), photo };
-    fetch("http://localhost:3000/trainers", {
+    fetch("http://localhost:8001/trainers", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -55,7 +54,7 @@ function Trainer() {
   }
 
   function handleDelete(id) {
-    fetch(`http://localhost:3000/trainers/${id}`, { method: "DELETE" }).then(
+    fetch(`http://localhost:8001/trainers/${id}`, { method: "DELETE" }).then(
       () => setTrainers(trainers.filter((trainer) => trainer.id !== id))
     );
   }
@@ -110,6 +109,10 @@ function Trainer() {
             {row.map((trainer) => (
               <TrainerCard
                 key={trainer.id}
+               
+
+
+
                 trainer={trainer}
                 onDelete={handleDelete}
               />
